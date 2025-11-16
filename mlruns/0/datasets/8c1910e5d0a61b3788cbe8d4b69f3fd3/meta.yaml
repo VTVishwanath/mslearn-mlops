@@ -1,0 +1,32 @@
+digest: d73abc20
+name: dataset
+profile: '{"num_rows": 3640, "num_elements": 134680}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "tenure", "required": false},
+  {"type": "double", "name": "age", "required": false}, {"type": "double", "name":
+  "address", "required": false}, {"type": "double", "name": "income", "required":
+  false}, {"type": "double", "name": "ed", "required": false}, {"type": "double",
+  "name": "employ", "required": false}, {"type": "double", "name": "equip", "required":
+  false}, {"type": "double", "name": "callcard", "required": false}, {"type": "double",
+  "name": "wireless", "required": false}, {"type": "double", "name": "longmon", "required":
+  false}, {"type": "double", "name": "tollmon", "required": false}, {"type": "double",
+  "name": "equipmon", "required": false}, {"type": "double", "name": "cardmon", "required":
+  false}, {"type": "double", "name": "wiremon", "required": false}, {"type": "double",
+  "name": "longten", "required": false}, {"type": "double", "name": "tollten", "required":
+  false}, {"type": "double", "name": "cardten", "required": false}, {"type": "double",
+  "name": "voice", "required": false}, {"type": "double", "name": "pager", "required":
+  false}, {"type": "double", "name": "internet", "required": false}, {"type": "double",
+  "name": "callwait", "required": false}, {"type": "double", "name": "confer", "required":
+  false}, {"type": "double", "name": "ebill", "required": false}, {"type": "double",
+  "name": "loglong", "required": false}, {"type": "double", "name": "logtoll", "required":
+  false}, {"type": "double", "name": "lninc", "required": false}, {"type": "double",
+  "name": "custcat", "required": false}, {"type": "double", "name": "PatientID", "required":
+  false}, {"type": "double", "name": "Pregnancies", "required": false}, {"type": "double",
+  "name": "PlasmaGlucose", "required": false}, {"type": "double", "name": "DiastolicBloodPressure",
+  "required": false}, {"type": "double", "name": "TricepsThickness", "required": false},
+  {"type": "double", "name": "SerumInsulin", "required": false}, {"type": "double",
+  "name": "BMI", "required": false}, {"type": "double", "name": "DiabetesPedigree",
+  "required": false}, {"type": "double", "name": "Age", "required": false}, {"type":
+  "double", "name": "Diabetic", "required": false}]}'
+source: '{"tags": {"mlflow.user": "vtvis", "mlflow.source.name": ".\\src\\model\\train.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "a2a677b2f902dc4a98490f0fcaf54b4f8de3b463"}}'
+source_type: code

@@ -1,0 +1,25 @@
+digest: 43fef8f2
+name: dataset
+profile: '{"num_rows": 140, "num_elements": 3780}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "tenure", "required": true},
+  {"type": "double", "name": "age", "required": true}, {"type": "double", "name":
+  "address", "required": true}, {"type": "double", "name": "income", "required": true},
+  {"type": "double", "name": "ed", "required": true}, {"type": "double", "name": "employ",
+  "required": true}, {"type": "double", "name": "equip", "required": true}, {"type":
+  "double", "name": "callcard", "required": true}, {"type": "double", "name": "wireless",
+  "required": true}, {"type": "double", "name": "longmon", "required": true}, {"type":
+  "double", "name": "tollmon", "required": true}, {"type": "double", "name": "equipmon",
+  "required": true}, {"type": "double", "name": "cardmon", "required": true}, {"type":
+  "double", "name": "wiremon", "required": true}, {"type": "double", "name": "longten",
+  "required": true}, {"type": "double", "name": "tollten", "required": true}, {"type":
+  "double", "name": "cardten", "required": true}, {"type": "double", "name": "voice",
+  "required": true}, {"type": "double", "name": "pager", "required": true}, {"type":
+  "double", "name": "internet", "required": true}, {"type": "double", "name": "callwait",
+  "required": true}, {"type": "double", "name": "confer", "required": true}, {"type":
+  "double", "name": "ebill", "required": true}, {"type": "double", "name": "loglong",
+  "required": true}, {"type": "double", "name": "logtoll", "required": true}, {"type":
+  "double", "name": "lninc", "required": true}, {"type": "double", "name": "custcat",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "vtvis", "mlflow.source.name": ".\\src\\model\\train.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "a2a677b2f902dc4a98490f0fcaf54b4f8de3b463"}}'
+source_type: code

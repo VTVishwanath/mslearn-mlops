@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/vtvis/Downloads/mslearn-mlops/mlruns/0/45356119967541a2905f8cd770ef551f/artifacts
+end_time: 1763270043183
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 45356119967541a2905f8cd770ef551f
+run_name: mercurial-pug-287
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763270022512
+status: 3
+tags: []
+user_id: vtvis

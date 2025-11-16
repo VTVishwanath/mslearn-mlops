@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/vtvis/Downloads/mslearn-mlops/mlruns/0/1e0201d78824429fa2fe6cdd450e3969/artifacts
+end_time: 1763270461150
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1e0201d78824429fa2fe6cdd450e3969
+run_name: peaceful-shad-689
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763270445057
+status: 3
+tags: []
+user_id: vtvis

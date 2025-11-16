@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/vtvis/Downloads/mslearn-mlops/mlruns/0/8cd9ef608efe4deaa098cb6948971bbe/artifacts
+end_time: 1763270343141
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8cd9ef608efe4deaa098cb6948971bbe
+run_name: bittersweet-roo-679
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763270323806
+status: 3
+tags: []
+user_id: vtvis

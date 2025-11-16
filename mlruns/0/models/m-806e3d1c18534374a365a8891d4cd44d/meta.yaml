@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/vtvis/Downloads/mslearn-mlops/mlruns/0/models/m-806e3d1c18534374a365a8891d4cd44d/artifacts
+creation_timestamp: 1763270324309
+experiment_id: '0'
+last_updated_timestamp: 1763270342770
+model_id: m-806e3d1c18534374a365a8891d4cd44d
+model_type: null
+name: model
+source_run_id: 8cd9ef608efe4deaa098cb6948971bbe
+status: 2
+status_message: null

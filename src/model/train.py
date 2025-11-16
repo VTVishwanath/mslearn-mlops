@@ -1,45 +1,83 @@
 # Import libraries
-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 import argparse
 import glob
 import os
-
-import pandas as pd
-
+import mlflow
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-
+from sklearn.metrics import precision_score, recall_score, accuracy_score, confusion_matrix, roc_auc_score, roc_curve
+import joblib
+import warnings
+warnings.filterwarnings("ignore")
 
 # define functions
 def main(args):
-    # TO DO: enable autologging
-
+    # DONE: enable autologging
+    mlflow.autolog()
 
     # read data
-    df = get_csvs_df(args.training_data)
+    df = get_data(args.training_data)
 
     # split data
     X_train, X_test, y_train, y_test = split_data(df)
 
     # train model
-    train_model(args.reg_rate, X_train, X_test, y_train, y_test)
+    model = train_model(args.reg_rate, X_train, X_test, y_train, y_test)
+
+    # evaluate model
+    eval_model(model, X_test, y_test)
+
+    # Save Model
+    print("Saving the model...")
+    model_name = "sklearn_logistic_regression_model.pkl"
+    joblib.dump(value=model, filename=model_name)
 
 
-def get_csvs_df(path):
-    if not os.path.exists(path):
-        raise RuntimeError(f"Cannot use non-existent path provided: {path}")
-    csv_files = glob.glob(f"{path}/*.csv")
-    if not csv_files:
-        raise RuntimeError(f"No CSV files found in provided data path: {path}")
-    return pd.concat((pd.read_csv(f) for f in csv_files), sort=False)
+def get_data(path):
+    print("Reading data...")
+    df = pd.read_csv(path)
+    return df
 
 
-# TO DO: add function to split data
-
+# DONE: add function to split data
+def split_data(df):
+    X = df.drop("churn", axis=1)
+    y = df["churn"]
+    print("Splitting data...")
+    return train_test_split(X, y, test_size=0.3, random_state=0)
 
 def train_model(reg_rate, X_train, X_test, y_train, y_test):
     # train model
-    LogisticRegression(C=1/reg_rate, solver="liblinear").fit(X_train, y_train)
+    print("Training model...")
+    return LogisticRegression(C=1/reg_rate, solver="liblinear").fit(X_train, y_train)
 
+# function that evaluates the model
+def eval_model(model, X_test, y_test):
+    # calculate accuracy
+    y_hat = model.predict(X_test)
+    acc = np.average(y_hat == y_test)
+    print('Accuracy:', acc)
+
+    # calculate AUC
+    y_scores = model.predict_proba(X_test)
+    auc = roc_auc_score(y_test,y_scores[:,1])
+    print('AUC: ' + str(auc))
+
+    # plot ROC curve
+    """fpr, tpr, thresholds = roc_curve(y_test, y_scores[:,1])
+    fig = plt.figure(figsize=(6, 4))
+    # Plot the diagonal 50% line
+    plt.plot([0, 1], [0, 1], 'k--')
+    # Plot the FPR and TPR achieved by our model
+    plt.plot(fpr, tpr)
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('ROC Curve')
+    print("Evaluating the model...")"""
 
 def parse_args():
     # setup arg parser

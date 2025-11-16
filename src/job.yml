@@ -1,15 +1,16 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
 command: >-
-  python 
-  --
-  --
+  python model/train.py
+  --training_data ${{inputs.training_data}}
+  --reg_rate ${{inputs.reg_rate}}
 inputs:
   training_data: 
-    type: uri_folder 
-    path: 
+    type: uri_file
+    path: ../experimentation/data/ChurnData.csv
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: 
-experiment_name: 
-description: 
+compute: azureml:vtvishwanathbhat1
+experiment_name: churn-data-example
+description: Train a classification model on churn data using a registered dataset as input.
+display_name: Train Churn Model
