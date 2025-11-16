@@ -10,7 +10,7 @@ inputs:
     path: ../experimentation/data/ChurnData.csv
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: azureml:vtvishwanathbhat1
+compute: azureml:aml-cluster
 experiment_name: churn-data-example
 description: Train a classification model on churn data using a registered dataset as input.
 display_name: Train Churn Model
