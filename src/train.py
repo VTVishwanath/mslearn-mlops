@@ -2,7 +2,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 import argparse
 import glob
 import os
@@ -57,6 +56,7 @@ def train_model(reg_rate, X_train, X_test, y_train, y_test):
 
 # function that evaluates the model
 def eval_model(model, X_test, y_test):
+    print("Evaluating the model...")
     # calculate accuracy
     y_hat = model.predict(X_test)
     acc = np.average(y_hat == y_test)
@@ -68,7 +68,7 @@ def eval_model(model, X_test, y_test):
     print('AUC: ' + str(auc))
 
     # plot ROC curve
-    """fpr, tpr, thresholds = roc_curve(y_test, y_scores[:,1])
+    fpr, tpr, thresholds = roc_curve(y_test, y_scores[:,1])
     fig = plt.figure(figsize=(6, 4))
     # Plot the diagonal 50% line
     plt.plot([0, 1], [0, 1], 'k--')
@@ -77,7 +77,7 @@ def eval_model(model, X_test, y_test):
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curve')
-    print("Evaluating the model...")"""
+    
 
 def parse_args():
     # setup arg parser
